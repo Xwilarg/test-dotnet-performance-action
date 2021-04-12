@@ -1,0 +1,3 @@
+[submodule "dotnet-performance-action"]
+	path = dotnet-performance-action
+	url = https://github.com/Xwilarg/dotnet-performance-action
