@@ -26,8 +26,8 @@ jobs:
     - name: Performance tool install
       run: dotnet tool install -g BenchmarkDotNet.Tool && cd $(ls -d */|head -n 1) && dotnet run -c Release -- --filter *Sum* --keepfiles && cd ..
     - name: Debug
-      run: tree && ls ./MyBenchmarks/MyBenchmarkDotNet.Artifacts/results/MyBenchmarks.Md5VsSha256-report.csv
+      run: tree && ls ./MyBenchmarks/BenchmarkDotNet.Artifacts/results/MyBenchmarks.Md5VsSha256-report.csv
     - name: Test
       uses: ./dotnet-performance-action
       with:
-        performance-report: ./MyBenchmarks/MyBenchmarkDotNet.Artifacts/results/MyBenchmarks.Md5VsSha256-report.csv
+        performance-report: ./MyBenchmarks/BenchmarkDotNet.Artifacts/results/MyBenchmarks.Md5VsSha256-report.csv
